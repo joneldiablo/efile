@@ -1,0 +1,7 @@
+{
+    "editor.renderWhitespace": "all",
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 0,
+    "vsicons.projectDetection.autoReload": true,
+    "explorer.confirmDragAndDrop": false
+}
