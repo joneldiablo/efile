@@ -1,5 +1,7 @@
 extend ./base
 
+include ../_modules/pug-components/panel/panel
+
 block append config
   - var page= '';
 
@@ -34,6 +36,7 @@ block content
     //- Provides layout level markup
     .layout-wrapper.common(id=page)
         block common
+    +panel()(class="bg-light")
 
 block append stylesheets
   if config.environment == "DEVELOPMENT"
