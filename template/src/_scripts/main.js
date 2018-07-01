@@ -1,13 +1,8 @@
 // Main javascript entry point
 // Should handle bootstrapping/starting application
 
-'use strict';
-
-import $ from 'jquery';
-import 'bootstrap';
-import Link from '../_modules/link/link';
-
-$(() => {
-  new Link(); // Activate Link modules logic
-  console.log('Welcome to Yeogurt!');
-});
+(($, c8s) => {
+  components = {
+    panel: new c8s.Panel($, '.panel', {})
+  };
+})(jQuery, components);
