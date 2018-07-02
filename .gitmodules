@@ -1,0 +1,2 @@
+[submodule "template/src/_modules/pug-components"]
+	url = https://github.com/joneldiablo/pug-components.git
