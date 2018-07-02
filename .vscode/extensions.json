@@ -4,7 +4,7 @@
 	"recommendations": [
 		// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
 		"ajhyndman.vscode-svgo",
-		"AndersEAndersen.html-class-suggestions",
+		"AndersEAndersen.html-class-sugmanagements",
 		"andi1984.tinypng",
 		"christian-kohler.path-intellisense",
 		"codezombiech.gitignore",

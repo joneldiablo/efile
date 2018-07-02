@@ -1,0 +1,14 @@
+extend ./common
+
+block append config
+  - admin = true
+
+block common
+  //- Provides layout level markup
+  .layout-wrapper.admin
+    block admin
+block menu-secondary
+  div.list-group.list-group-flush.border-bottom
+    each elem in site.data.menu.admin
+      a.list-group-item(href=baseUrl + elem.href class={active:!page.search(elem.href)})= elem.label
+

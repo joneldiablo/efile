@@ -1,0 +1,50 @@
+{
+    "management": [
+        {
+            "href": "pages/gestion/busqueda-general",
+            "label": "Búsqueda general"
+        },
+        {
+            "href": "pages/gestion/registro-control",
+            "label": "Registro y control de correspondencia"
+        },
+        {
+            "href": "pages/gestion/clasificacion-expedientes",
+            "label": "Clasificación de expedientes"
+        },
+        {
+            "href": "pages/gestion/carga-masiva",
+            "label": "Carga masiva"
+        },
+        {
+            "href": "pages/gestion/bitacora-prestamo",
+            "label": "Bitacora de préstamo"
+        }
+    ],
+    "admin": [
+        {
+            "href": "pages/administracion/lista-usuarios",
+            "label": "Usuarios"
+        },
+        {
+            "href": "pages/administracion/perfil",
+            "label": "Perfiles"
+        },
+        {
+            "href": "pages/administracion/ubicacion",
+            "label": "Ubicación física"
+        },
+        {
+            "href": "pages/administracion/secciones",
+            "label": "Cuadro general de clasificación archivistica"
+        },
+        {
+            "href": "pages/administracion/estilos",
+            "label": "Catálogo de disposición documental"
+        },
+        {
+            "href": "pages/administracion/estilos",
+            "label": "Administración de estilos"
+        }
+    ]
+}

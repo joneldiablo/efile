@@ -1,9 +1,31 @@
-extends ../../../_layouts/common
+extends ../../../_layouts/management
+
+include ../../../_modules/pug-components/form-field/form-field
 
 block append config
   //- Correct base url pathing for this page
   - baseUrl = '../../../'
   - page = 'pages/gestion/busqueda-general'
 
-block common
-  p pages/gestion/busqueda-general page
+
+block management
+  .row.py-4
+    .col-sm-8.col-lg-10
+      +form-field({
+        type: "input-group-icon",
+        name: "search",
+        igi: {
+          type: "text",
+          icon: "icon-search"
+        }
+      })
+      .card.bg-light
+        | demo
+    .col-sm-4.col-lg-2
+      .dropdown
+        button#dropdownMenuButton.btn.btn-outline-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+          | Opciones
+        .dropdown-menu(aria-labelledby='dropdownMenuButton')
+          a.dropdown-item(href='#') Action
+          a.dropdown-item(href='#') Another action
+          a.dropdown-item(href='#') Something else here

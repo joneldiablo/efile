@@ -1,23 +1,27 @@
-
 // variables
 @import 'sandstone-efile/variables';
-
 // bootstrap
 @import 'node_modules/bootstrap/scss/bootstrap';
-
 // estructure
 @import 'sandstone-efile/bootswatch';
+@import 'icons/variables';
+@import 'icons/style.scss';
 
 // Import Modules
-
-
-
+@import '../_modules/pug-components/icons/icons';
+@import '../_modules/pug-components/panel/panel';
+body {
+    width: calc(100% - 162px);
+    nav.navbar.fixed-top {
+        margin-left: 162px;
+    }
+}
 
 // Styling on warning for users on IE7 or below
 .browsehappy {
-  text-align: center;
-  margin: 0;
-  background: #fff8e2;
-  color: #000;
-  padding: 0.5em 0;
+    text-align: center;
+    margin: 0;
+    background: #fff8e2;
+    color: #000;
+    padding: 0.5em 0;
 }

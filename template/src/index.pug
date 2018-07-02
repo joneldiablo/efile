@@ -12,7 +12,7 @@ block common
       function buble(children){
         for(let i in children){
           let page = children[i].path.replace(/\\/g,'/').replace(/^(\.\/)?src/,'').replace(/^\//,'').replace('pug','html');
-          if(children[i].type === "directory" && page!=='pages'){
+          if(children[i].type !== "directory"){
             output.push(page);
           }
           if(children[i].children){

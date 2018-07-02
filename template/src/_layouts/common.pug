@@ -4,10 +4,11 @@ include ../_modules/pug-components/panel/panel
 
 block append config
   - var page= '';
+  - var admin= false;
+  - var management= false;
 
 block content
-    nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
-        a.navbar-brand(href='#') eFile
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
         -
             var btnAttrs = {
                 'type':'button',
@@ -21,22 +22,31 @@ block content
             span.navbar-toggler-icon
         #navbarColor01.collapse.navbar-collapse
             ul.navbar-nav.mr-auto
-                li.nav-item.active
-                    a.nav-link(href='#') Home 
-                    span.sr-only (current)
-                li.nav-item
-                    a.nav-link(href='#') Features
-                li.nav-item
-                    a.nav-link(href='#') Pricing
-                li.nav-item
-                    a.nav-link(href='#') About
-            form.form-inline.my-2.my-lg-0
-                input.form-control.mr-sm-2(type='text', placeholder='Search')
-                button.btn.btn-secondary.my-2.my-sm-0(type='submit') Search
+                li.nav-item(class={"active":management})
+                    a.nav-link(href= baseUrl + 'pages/gestion/busqueda-general') Gestión documental 
+                    if management
+                      span.sr-only (current)
+                li.nav-item(class={"active":admin})
+                    a.nav-link(href = baseUrl + 'pages/administracion/lista-usuarios') Administración
+                    if admin
+                      span.sr-only (current)
+            ul.navbar-nav.my-2.my-lg-0
+              li.nav-item.dropdown
+                a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  +icons({icon:"circle-white"})
+                  | Andres Méndez
+                .dropdown-menu(aria-labelledby='navbarDropdown')
+                  a.dropdown-item(href='#') Configuración
+                  .dropdown-divider
+                  a.dropdown-item(href='') Cerrar sesión
     //- Provides layout level markup
-    .layout-wrapper.common(id=page)
+    .layout-wrapper.common.py-5.px-3(id=page)
         block common
-    +panel()(class="bg-light")
+    +panel({trigger:false,wrapper:false})(class="bg-light")
+      .bg-white
+        a(href=baseUrl)
+          img.d-block.mx-auto(src=baseUrl+"assets/images/post_escudo-oficial-2016.jpg", alt="" height="42")
+      block menu-secondary
 
 block append stylesheets
   if config.environment == "DEVELOPMENT"
