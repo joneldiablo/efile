@@ -5,7 +5,8 @@
     "bootstrap": "^4.0.0",
     "gsap": "^2.0.1",
     "jquery": "~3.1.1",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.3",
+    "slidereveal": "git+https://github.com/nnattawat/slideReveal.git"
   },
   "devDependencies": {
     "autoprefixer": "~6.7.5",
@@ -66,7 +67,7 @@
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.min.js",
     "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-    "sliderveal": "./bower_components/slidereveal/dist/jquery.slidereveal.js"
+    "sliderveal": "./node_modules/slidereveal/dist/jquery.slidereveal.js"
   },
   "browserify-shim": {
     "jquery": "global:jQuery",
