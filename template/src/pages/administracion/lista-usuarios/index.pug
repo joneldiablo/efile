@@ -1,9 +1,10 @@
-extends ../../../_layouts/common
+extends ../../../_layouts/admin
 
 block append config
   //- Correct base url pathing for this page
   - baseUrl = '../../../'
   - page = 'pages/administracion/lista-usuarios'
 
-block common
+
+block admin
   p pages/administracion/lista-usuarios page

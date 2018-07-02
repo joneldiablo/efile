@@ -1,0 +1,10 @@
+extends ../../../_layouts/admin
+
+block append config
+  //- Correct base url pathing for this page
+  - baseUrl = '../../../'
+  - page = 'pages/administracion/secciones'
+
+
+block admin
+  p pages/administracion/secciones page

@@ -7,21 +7,20 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,500,700" !de
 .bg-primary {
     background-color: $dark !important;
     .nav-item.active {
-      background-color: $body-color;
+        background-color: $body-color;
     }
 }
 
 .bg-dark {
     background-color: $secondary !important;
     .nav-item.active {
-      background-color: $gray-700;
+        background-color: $gray-700;
     }
 }
 
 .bg-light {
-    background-color: $gray-200 !important;
     .nav-item.active {
-      background-color: $gray-300;
+        background-color: $gray-300;
     }
 }
 
@@ -226,3 +225,8 @@ input,
 
 // Progress bars ===============================================================
 // Containers ==================================================================
+// list-group
+a.list-group-item {
+    color: $gray-700;
+    font-size: 13px;
+}
