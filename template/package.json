@@ -64,11 +64,23 @@
     "node": ">=0.12.0"
   },
   "browser": {
-    "jquery": "./node_modules/jquery/dist/jquery.min.js"
+    "jquery": "./node_modules/jquery/dist/jquery.min.js",
+    "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+    "sliderveal": "./bower_components/slidereveal/dist/jquery.slidereveal.js"
   },
   "browserify-shim": {
-    "jquery": "jQuery",
-    "three": "global:THREE"
+    "jquery": "global:jQuery",
+    "three": "global:THREE",
+    "bootstrap": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    },
+    "sliderveal": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    }
   },
   "browserify": {
     "transform": [
