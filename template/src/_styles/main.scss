@@ -10,13 +10,14 @@
 // Import Modules
 @import '../_modules/pug-components/icons/icons';
 @import '../_modules/pug-components/panel/panel';
+@import '../_modules/search-filters/search-filters';
+//
 body {
     width: calc(100% - 162px);
     nav.navbar.fixed-top {
         margin-left: 162px;
     }
 }
-
 // Styling on warning for users on IE7 or below
 .browsehappy {
     text-align: center;

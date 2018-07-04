@@ -1,6 +1,7 @@
 extends ../../../_layouts/management
 
 include ../../../_modules/pug-components/form-field/form-field
+include ../../../_modules/search-filters/search-filters
 
 block append config
   //- Correct base url pathing for this page
@@ -19,73 +20,7 @@ block management
           icon: "icon-search"
         }
       })
-
-
-      .card.bg-light
-        .row.py-4 
-          .col-sm-3.col-lg-3
-            label 
-              b Unidad administrativa
-              label Recursos Humanos
-          .col-sm-3.col-lg-3
-            label 
-              b Periodo
-                +form-field({
-                  type: "input-group-icon",
-                  name: "date",
-                  igi: {
-                    type: "text",
-                    icon: "icon-search"
-                  }
-                })
-          .col-sm-3.col-lg-3
-            label 
-              b Periodo 
-                +form-field({
-                  type: "input-group-icon",
-                  name: "date",
-                  igi: {
-                    type: "text",
-                    icon: "icon-search"
-                  }
-                })
-          .col-sm-3.col-lg-3
-            label 
-              b Estado
-                .form-check.form-check-inline
-                  input#inlineRadio1.form-check-input(type='radio', name='inlineRadioOptions', value='option1')
-                  label.form-check-label(for='inlineRadio1') Vigente
-                .form-check.form-check-inline
-                  input#inlineRadio2.form-check-input(type='radio', name='inlineRadioOptions', value='option2')
-                  label.form-check-label(for='inlineRadio2') Concluido
-        .row.py-4 
-          .col-sm-3.col-lg-3
-            label 
-              b Sección
-              +form-field({
-                type: "select",
-                name: "seccion"
-              })
-          .col-sm-3.col-lg-3
-            label 
-              b Serie
-              +form-field({
-                type: "select",
-                name: "serie"
-              })
-          .col-sm-3.col-lg-3
-            label 
-              b Sub-serie
-              +form-field({
-                type: "select",
-                name: "sub-serie"
-              })
-          .col-sm-3.col-lg-3
-            +form-field({
-              type: "submit",
-              name: "buscar",
-            })
-
+      +search-filters
       nav.nav.nav-pills.nav-fill
         a.nav-item.nav-link.active(href='#') Todos
         a.nav-item.nav-link(href='#') Trámite
