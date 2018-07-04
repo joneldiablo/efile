@@ -19,8 +19,81 @@ block management
           icon: "icon-search"
         }
       })
+
+
       .card.bg-light
-        | demo
+        .row.py-4 
+          .col-sm-3.col-lg-3
+            label 
+              b Unidad administrativa
+              label Recursos Humanos
+          .col-sm-3.col-lg-3
+            label 
+              b Periodo
+                +form-field({
+                  type: "input-group-icon",
+                  name: "date",
+                  igi: {
+                    type: "text",
+                    icon: "icon-search"
+                  }
+                })
+          .col-sm-3.col-lg-3
+            label 
+              b Periodo 
+                +form-field({
+                  type: "input-group-icon",
+                  name: "date",
+                  igi: {
+                    type: "text",
+                    icon: "icon-search"
+                  }
+                })
+          .col-sm-3.col-lg-3
+            label 
+              b Estado
+                .form-check.form-check-inline
+                  input#inlineRadio1.form-check-input(type='radio', name='inlineRadioOptions', value='option1')
+                  label.form-check-label(for='inlineRadio1') Vigente
+                .form-check.form-check-inline
+                  input#inlineRadio2.form-check-input(type='radio', name='inlineRadioOptions', value='option2')
+                  label.form-check-label(for='inlineRadio2') Concluido
+        .row.py-4 
+          .col-sm-3.col-lg-3
+            label 
+              b Sección
+              +form-field({
+                type: "select",
+                name: "seccion"
+              })
+          .col-sm-3.col-lg-3
+            label 
+              b Serie
+              +form-field({
+                type: "select",
+                name: "serie"
+              })
+          .col-sm-3.col-lg-3
+            label 
+              b Sub-serie
+              +form-field({
+                type: "select",
+                name: "sub-serie"
+              })
+          .col-sm-3.col-lg-3
+            +form-field({
+              type: "submit",
+              name: "buscar",
+            })
+
+      nav.nav.nav-pills.nav-fill
+        a.nav-item.nav-link.active(href='#') Todos
+        a.nav-item.nav-link(href='#') Trámite
+        a.nav-item.nav-link(href='#') Concentración
+        a.nav-item.nav-link(href='#') Concervación
+        a.nav-item.nav-link(href='#') Eliminación
+
+
     .col-sm-4.col-lg-2
       .dropdown
         button#dropdownMenuButton.btn.btn-outline-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
