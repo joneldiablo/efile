@@ -1,0 +1,145 @@
+<!DOCTYPE html><html class="no-js" lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>efile</title>
+  <meta name="description" content="A new Yeogurt application">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../../../assets/styles/main.css">
+</head>
+<body><!--[if lt IE 11]>
+<p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="../../../pages/gestion/busqueda-general">Gestión documental </a><span class="sr-only">(current)</span>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../../pages/administracion/lista-usuarios">Administración</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav my-2 my-lg-0">
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon circle-white"><span class="rounded-circle bg-white border border-dark"> </span></i>Andres Méndez</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Configuración</a>
+            <div class="dropdown-divider"></div><a class="dropdown-item" href="">Cerrar sesión</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="layout-wrapper common py-5 px-3" id="pages/gestion/busqueda-general">
+    <div class="layout-wrapper management">
+      <div class="row py-4">
+        <div class="col-sm-8 col-lg-10">
+          <div class="form-group form-field">
+            <div class="input-group-icon input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text bg-white border-right-0 px-2"><i class="icon icon-search"> </i>
+                </div>
+              </div>
+              <input class="form-control border-left-0 pl-0" name="search" id="search">
+            </div>
+          </div>
+          <div class="search-filters card bg-light p-3 mb-4">
+            <div class="row py-4"> 
+              <div class="col-sm-3 col-lg-3">
+                <label> <b>Unidad administrativa</b>
+                  <label>Recursos Humanos</label>
+                </label>
+              </div>
+              <div class="col-sm-3 col-lg-3">
+                <label> <b>Periodo
+                    <div class="form-group form-field">
+                      <div class="input-group-icon input-group">
+                        <input class="form-control border-right-0 pr-0" name="date" id="date">
+                        <div class="input-group-append">
+                          <div class="input-group-text bg-white border-right-0 px-2"><i class="icon icon-calendar"> </i>
+                          </div>
+                        </div>
+                      </div>
+                    </div></b></label>
+              </div>
+              <div class="col-sm-3 col-lg-3">
+                <label> <b>Periodo 
+                    <div class="form-group form-field">
+                      <div class="input-group-icon input-group">
+                        <input class="form-control border-right-0 pr-0" name="date" id="date">
+                        <div class="input-group-append">
+                          <div class="input-group-text bg-white border-right-0 px-2"><i class="icon icon-calendar"> </i>
+                          </div>
+                        </div>
+                      </div>
+                    </div></b></label>
+              </div>
+              <div class="col-sm-3 col-lg-3">
+                <label> <b>Estado
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" id="inlineRadio1" type="radio" name="inlineRadioOptions" value="option1">
+                      <label class="form-check-label" for="inlineRadio1">Vigente</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" id="inlineRadio2" type="radio" name="inlineRadioOptions" value="option2">
+                      <label class="form-check-label" for="inlineRadio2">Concluido</label>
+                    </div></b></label>
+              </div>
+            </div>
+            <div class="row py-4"> 
+              <div class="col-sm-3 col-lg-3">
+                <div class="form-group form-field">
+                  <label class="font-weight-bold" for="seccion">Sección</label>
+                  <select class="form-control" name="seccion" id="seccion" type="select">
+                    <option value="">1C Legislación</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-3 col-lg-3"> 
+                <div class="form-group form-field">
+                  <label class="font-weight-bold" for="serie">Serie</label>
+                  <select class="form-control" name="serie" id="serie" type="select">
+                    <option value="">Selecciona la serie</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-3 col-lg-3">
+                <div class="form-group form-field">
+                  <label class="font-weight-bold" for="sub-serie">Sub-serie</label>
+                  <select class="form-control" name="sub-serie" id="sub-serie" type="select">
+                    <option value="">Selecciona la sub-serie</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-3 col-lg-3">
+                <div class="form-group form-field">
+                  <input class="btn btn-primary btn-block" type="submit">
+                </div>
+              </div>
+            </div>
+          </div>
+          <nav class="nav nav-pills nav-fill"><a class="nav-item nav-link active" href="#">Todos</a><a class="nav-item nav-link" href="#">Trámite</a><a class="nav-item nav-link" href="#">Concentración</a><a class="nav-item nav-link" href="#">Conservación</a><a class="nav-item nav-link" href="#">Eliminación</a></nav>
+        </div>
+        <div class="col-sm-4 col-lg-2">
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" id="dropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Opciones</button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel bg-light">
+    <div class="panel-content">
+      <div class="bg-white"><a href="../../../"><img class="d-block mx-auto" src="../../../assets/images/post_escudo-oficial-2016.jpg" alt="" height="42"></a></div>
+      <div class="list-group list-group-flush border-bottom"><a class="list-group-item active" href="../../../pages/gestion/busqueda-general">Búsqueda general</a><a class="list-group-item" href="../../../pages/gestion/registro-control">Registro y control de correspondencia</a><a class="list-group-item" href="../../../pages/gestion/clasificacion-expedientes">Clasificación de expedientes</a><a class="list-group-item" href="../../../pages/gestion/carga-masiva">Carga masiva</a><a class="list-group-item" href="../../../pages/gestion/bitacora-prestamo">Bitacora de préstamo</a>
+      </div>
+    </div>
+  </div>
+  <!-- libs-->
+  <script>var baseUrl = '../../../';
+    
+  </script>
+  <script src="../../../assets/scripts/libs.js"></script>
+  <script src="../../../assets/scripts/components.js"></script>
+  <script src="../../../assets/scripts/main.js"></script>
+  <script src="../../../assets/scripts/loggedin.js"></script>
+</body></html>
