@@ -28,8 +28,10 @@ mixin search-filters(spec)
               type: "input-group-icon",
               name: "date",
               igi: {
-                type: "text",
-                icon: "icon-search"
+                type: "date",
+                prepend: false,
+                append: true,
+                icon: "icon-calendar"
               }
             })
       .col-sm-3.col-lg-3
@@ -43,30 +45,38 @@ mixin search-filters(spec)
               label.form-check-label(for='inlineRadio2') Concluido
     .row.py-4 
       .col-sm-3.col-lg-3
-        label 
-          b Sección
-          +form-field({
-            type: "select",
-            name: "seccion"
-          })
+        +form-field({
+          type: "select",
+          name: "seccion",
+          label: "Sección",
+          labelAttrs: {class: "font-weight-bold"},
+          options:{
+            "":{label:"1C Legislación"}
+          }
+        })
+
+      .col-sm-3.col-lg-3 
+        +form-field({
+          type: "select",
+          name: "serie",
+          label: "Serie",
+          labelAttrs: {class:"font-weight-bold"},
+          options:{
+            "":{label:"Selecciona la serie"}
+          }
+        })
+
       .col-sm-3.col-lg-3
-        label 
-          +form-field({
-            type: "select",
-            name: "serie",
-            label: "Serie",
-            labelAttrs: {class:"font-weight-bold"},
-            options:{
-              "":{label:"selecciona una opción"}
-            }
-          })
-      .col-sm-3.col-lg-3
-        label 
-          b Sub-serie
-          +form-field({
-            type: "select",
-            name: "sub-serie"
-          })
+        +form-field({
+          type: "select",
+          name: "sub-serie",
+          label: "Sub-serie",
+          labelAttrs: {class:"font-weight-bold"},
+          options:{
+            "":{label:"Selecciona la sub-serie"}
+          }
+        })
+
       .col-sm-3.col-lg-3
         +form-field({
           type: "submit",
