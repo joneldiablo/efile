@@ -1,9 +1,54 @@
-extends ../../_layouts/common
+extends ../../_layouts/panel-left
+
+include ../../_modules/pug-components/form-field/form-field
+include ../../_modules/pug-components/icons/icons
 
 block append config
   //- Correct base url pathing for this page
   - baseUrl = '../../'
-  - page = 'page/login'
+  - page = 'login'
 
-block common
-  p page/login page
+  -
+    let fields = [{
+      name: "username",
+      type: "input-group-icon",
+      igi: {
+        prepend: true,
+        icon: "icon-user",
+        attrs: {
+          type: "text",
+          placeholder: site.data.copy["id-usr"],
+          required: true
+        }
+      }
+    },
+    {
+      name: "password",
+      type: "input-group-icon",
+      igi: {
+        prepend: true,
+        icon: "icon-key",
+        attrs: {
+          type: "password",
+          placeholder: site.data.copy["id-pass"],
+          required: true
+        }
+      }
+    }]
+
+block panel-right
+  h1.h2.mb-5(copy-text="login")= site.data.copy["id-login"]
+  h2.h5.mb-3(copy-text="ingresa-datos")= site.data.copy["id-ingresa-datos"]
+  form#form-login(action="" method="POST")
+    each field in fields
+      +form-field(field)
+    +form-field({type:"submit", attrs:{class:"btn btn-primary", value:site.data.copy["id-10"], disabled:true}})
+
+block panel-left
+  p.h4.text-center Bienvenido al repositorio documental Virtual 
+    b E-file
+block append scripts
+  script(src=baseUrl+"assets/scripts/login.js")
+  
+      
+

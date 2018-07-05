@@ -1,0 +1,15 @@
+extend ./base
+
+include ../_modules/pug-components/panel/panel
+
+block content
+  .row.justify-content-center.bg-light.h-100
+    #main-content.w-300px.mt-5.py-2
+      block panel-right
+  //- Provides layout level markup
+  .layout-wrapper.panel-left
+    +panel({__class:"bg-primary text-white", 
+      trigger: false,
+      wrapper: false
+    })
+      block panel-left
