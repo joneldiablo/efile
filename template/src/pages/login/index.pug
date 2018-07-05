@@ -1,9 +1,67 @@
-extends ../../_layouts/common
+extends ../../_layouts/panel-left
+
+include ../../_modules/pug-components/form-field/form-field
+include ../../_modules/pug-components/icons/icons
 
 block append config
   //- Correct base url pathing for this page
   - baseUrl = '../../'
-  - page = 'page/login'
+  - page = 'login'
 
-block common
-  p page/login page
+  -
+    let fields = [{
+      name: "username",
+      type: "input-group-icon",
+      igi: {
+        prepend: true,
+        icon: "principal-user",
+        attrs: {
+          type: "text",
+          placeholder: site.data.copy["id-usr"],
+          required: true
+        }
+      }
+    },
+    {
+      name: "password",
+      type: "input-group-icon",
+      igi: {
+        prepend: true,
+        icon: "principal-key",
+        attrs: {
+          type: "password",
+          placeholder: site.data.copy["id-pass"],
+          required: true
+        }
+      }
+    }]
+
+block panel-right
+  h1.h2.font-weight-bold.text-primary.mb-5(copy-text="login")= site.data.copy["id-login"]
+  h2.h5.mb-3(copy-text="ingresa-datos")= site.data.copy["id-ingresa-datos"]
+  form#form-login(action="" method="POST")
+    each field in fields
+      +form-field(field)
+    p.mb-4
+      span(copy-text="forgotten")= site.data.copy["id-forgotten"]
+      a(href=baseUrl + "recuperar-contraseña")
+        u(copy-text="pass")= site.data.copy["id-pass"]
+      |  o 
+      a(href=baseUrl + "recuperar-usuario")
+        u(copy-text="usr")= site.data.copy["id-usr"]
+      | ?
+    +form-field({type:"submit", attrs:{class:"btn btn-primary", value:site.data.copy["id-10"], disabled:true}})
+    input(name="grant_type" type="hidden" value="password")
+    //input(name="account_type" type="hidden" value="0")
+    p#error-msg.text-danger(style="display:none" copy-text="datos-incorrectos")= site.data.copy["id-datos-incorrectos"]
+
+  p.mt-4.text-muted(copy-text="new-user")= site.data.copy["id-new-user"]
+  a.btn.btn-outline-primary.btn-block(href=baseUrl + "activacion", copy-text="new-15")= site.data.copy["id-15"]
+block panel-left
+  h1.h2.font-weight-bold.mb-5(copy-text="welcome")= site.data.copy["id-welcome"]
+  p(copy-text="benefits")= site.data.copy["id-benefits"]
+block append scripts
+  script(src=baseUrl+"assets/scripts/login.js")
+  
+      
+
