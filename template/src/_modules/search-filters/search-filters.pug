@@ -1,0 +1,85 @@
+mixin search-filters(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ""
+
+  .search-filters.card.bg-light.p-3.mb-4(class=spec.__class)&attributes(attributes)
+    .row.py-4 
+      .col-sm-3.col-lg-3
+        label 
+          b Unidad administrativa
+          label Recursos Humanos
+      .col-sm-3.col-lg-3
+        label 
+          b Periodo
+            +form-field({
+              type: "input-group-icon",
+              name: "date",
+              igi: {
+                type: "date",
+                prepend: false,
+                append: true,
+                icon: "icon-calendar"
+              }
+            })
+      .col-sm-3.col-lg-3
+        label 
+          b Periodo 
+            +form-field({
+              type: "input-group-icon",
+              name: "date",
+              igi: {
+                type: "date",
+                prepend: false,
+                append: true,
+                icon: "icon-calendar"
+              }
+            })
+      .col-sm-3.col-lg-3
+        label 
+          b Estado
+            .form-check.form-check-inline
+              input#inlineRadio1.form-check-input(type='radio', name='inlineRadioOptions', value='option1')
+              label.form-check-label(for='inlineRadio1') Vigente
+            .form-check.form-check-inline
+              input#inlineRadio2.form-check-input(type='radio', name='inlineRadioOptions', value='option2')
+              label.form-check-label(for='inlineRadio2') Concluido
+    .row.py-4 
+      .col-sm-3.col-lg-3
+        +form-field({
+          type: "select",
+          name: "seccion",
+          label: "Sección",
+          labelAttrs: {class: "font-weight-bold"},
+          options:{
+            "":{label:"1C Legislación"}
+          }
+        })
+
+      .col-sm-3.col-lg-3 
+        +form-field({
+          type: "select",
+          name: "serie",
+          label: "Serie",
+          labelAttrs: {class:"font-weight-bold"},
+          options:{
+            "":{label:"Selecciona la serie"}
+          }
+        })
+
+      .col-sm-3.col-lg-3
+        +form-field({
+          type: "select",
+          name: "sub-serie",
+          label: "Sub-serie",
+          labelAttrs: {class:"font-weight-bold"},
+          options:{
+            "":{label:"Selecciona la sub-serie"}
+          }
+        })
+
+      .col-sm-3.col-lg-3
+        +form-field({
+          type: "submit",
+          name: "buscar",
+        })
+
