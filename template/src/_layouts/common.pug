@@ -57,5 +57,6 @@ block append lib-scripts
     var baseUrl = '#{baseUrl}';
 
 block append scripts
+  script(src=baseUrl + "assets/scripts/loggedin.js")
   if config.environment == "DEVELOPMENT"
     script(src=baseUrl + "assets/scripts/main-development.js")

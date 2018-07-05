@@ -5,6 +5,7 @@
     "bootstrap": "^4.0.0",
     "gsap": "^2.0.1",
     "jquery": "~3.1.1",
+    "jquery-validation": "^1.17.0",
     "popper.js": "^1.14.3",
     "slidereveal": "git+https://github.com/nnattawat/slideReveal.git"
   },
@@ -67,7 +68,8 @@
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.min.js",
     "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-    "sliderveal": "./node_modules/slidereveal/dist/jquery.slidereveal.js"
+    "sliderveal": "./node_modules/slidereveal/dist/jquery.slidereveal.js",
+    "jquery-validation": "./node_modules/jquery-validation/dist/jquery.validate.min.js"
   },
   "browserify-shim": {
     "jquery": "global:jQuery",
@@ -78,6 +80,11 @@
       ]
     },
     "sliderveal": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    },
+    "jquery-validation": {
       "depends": [
         "jquery:jQuery"
       ]
@@ -93,7 +100,7 @@
     "//": "Entry files",
     "environment": "DEVELOPMENT",
     "host": "127.0.0.1",
-    "port": "3000",
+    "port": "3004",
     "baseUrl": "./",
     "directories": {
       "source": "src",

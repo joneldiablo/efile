@@ -148,3 +148,13 @@ $close-text-shadow:                 none;
 $font-path: "../fonts";
 $icomoon-font-path: $font-path + "/icons";
 
+//sizes
+$sizes: ();
+$sizes: map-merge((
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  300px: 300px
+), $sizes);
+

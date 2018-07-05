@@ -6,17 +6,25 @@
 @import 'sandstone-efile/bootswatch';
 @import 'icons/variables';
 @import 'icons/style.scss';
-
 // Import Modules
 @import '../_modules/pug-components/icons/icons';
 @import '../_modules/pug-components/panel/panel';
+@import '../_modules/search-filters/search-filters';
+//
+html,
 body {
-    width: calc(100% - 162px);
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
     nav.navbar.fixed-top {
         margin-left: 162px;
     }
+    .layout-wrapper.common {
+        margin-left: 162px;
+    }
 }
-
 // Styling on warning for users on IE7 or below
 .browsehappy {
     text-align: center;
